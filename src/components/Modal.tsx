@@ -12,7 +12,10 @@ export default function Modal({ nav }: ModalProps) {
           {nav.map((item) => (
             <li key={item.id}>
               <Link to={item.link}>
-                <p className="text-md font-medium text-grayishBlue">
+                <p
+                  className="text-md font-medium text-grayishBlue hover:bg-gradient-to-r from-limeGreen to-brightCyan 
+        hover:text-transparent inline-block  bg-clip-text"
+                >
                   {item?.name}
                 </p>
               </Link>
