@@ -10,7 +10,12 @@ export default function ArticleCard({
       <img src={image} alt="image" className="rounded-t-lg " />
       <div className="bg-[#FFFF] p-[1rem] space-y-2 rounded-b-lg ">
         <p className="text-grayishBlue">By {author}</p>
-        <h3 className="text-DarkBlue text-xl font-[600]">{title}</h3>
+        <h3
+          className="text-DarkBlue text-xl font-[600] hover:bg-gradient-to-r from-limeGreen to-brightCyan 
+        hover:text-transparent inline-block  bg-clip-text cursor-pointer"
+        >
+          {title}
+        </h3>
         <p className="text-grayishBlue">{body} </p>
       </div>
     </div>
