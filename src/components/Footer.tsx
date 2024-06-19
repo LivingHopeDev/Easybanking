@@ -5,6 +5,7 @@ import twitterIcon from "../assets/images/icon-twitter.svg";
 import youtubeIcon from "../assets/images/icon-youtube.svg";
 import logo from "../assets/images/logo.svg";
 import RequestBtn from "./Button/Request";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   const footNav = [
@@ -77,9 +78,9 @@ export default function Footer() {
               className="hover:bg-gradient-to-r from-limeGreen to-brightCyan 
         hover:text-transparent inline-block "
             >
-              <a href={item.link} key={item.id}>
+              <Link to={item.link} key={item.id}>
                 <img src={item.image} alt="facebook-icon" />
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -92,13 +93,13 @@ export default function Footer() {
           item.id <= 3 ? "" : "grid-col-start-2"
         }`}
           >
-            <a
-              href={item.link}
+            <Link
+              to={item.link}
               key={item.id}
               className="text-lightGrayishBlue hover:text-limeGreen "
             >
               {item.name}
-            </a>
+            </Link>
           </li>
         ))}
       </nav>
